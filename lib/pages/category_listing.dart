@@ -1,6 +1,5 @@
-import 'dart:html';
-
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
+import 'package:e_commerce/pages/common/src/app_drawer.dart';
 import 'package:e_commerce/pages/common/src/footer.dart';
 import 'package:e_commerce/pages/common/src/header.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +16,7 @@ class _CategoryListingState extends State<CategoryListing> {
     return DefaultTabController(
       length: 6,
       child: Scaffold(
+        drawer: AppDrawer(),
         body: SafeArea(
           top: true,
           child: Column(

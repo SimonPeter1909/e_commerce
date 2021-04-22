@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:e_commerce/pages/common/src/app_drawer.dart';
 import 'package:e_commerce/utils/router.gr.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: AppDrawer(),
       body: SafeArea(
         top: true,
         child: Column(

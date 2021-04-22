@@ -23,6 +23,9 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp.router(
         title: 'E-Commerce',
+        supportedLocales: [
+          Locale('en'),
+        ],
         theme: ThemeData(
           primarySwatch: Colors.blue,
           textTheme: GoogleFonts.latoTextTheme()
