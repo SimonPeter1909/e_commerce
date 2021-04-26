@@ -5,8 +5,10 @@
 // **************************************************************************
 
 import 'package:auto_route/auto_route.dart' as _i1;
+import 'package:e_commerce/pages/about_us.dart' as _i7;
 import 'package:e_commerce/pages/cart.dart' as _i3;
-import 'package:e_commerce/pages/category_listing.dart' as _i4;
+import 'package:e_commerce/pages/category_listing/category_listing.dart' as _i4;
+import 'package:e_commerce/pages/contact_us.dart' as _i8;
 import 'package:e_commerce/pages/dashboard.dart' as _i2;
 import 'package:e_commerce/pages/login.dart' as _i5;
 import 'package:e_commerce/pages/product_listing.dart' as _i6;
@@ -30,6 +32,12 @@ class FlutterRouter extends _i1.RootStackRouter {
     },
     Products.name: (entry) {
       return _i1.AdaptivePage(entry: entry, child: _i6.ProductListing());
+    },
+    About_us.name: (entry) {
+      return _i1.AdaptivePage(entry: entry, child: _i7.AboutUs());
+    },
+    Contact_us.name: (entry) {
+      return _i1.AdaptivePage(entry: entry, child: _i8.ContactUs());
     }
   };
 
@@ -39,7 +47,9 @@ class FlutterRouter extends _i1.RootStackRouter {
         _i1.RouteConfig(Cart.name, path: '/Cart'),
         _i1.RouteConfig(Categories.name, path: '/category-listing'),
         _i1.RouteConfig(Login.name, path: '/Login'),
-        _i1.RouteConfig(Products.name, path: '/product-listing')
+        _i1.RouteConfig(Products.name, path: '/product-listing'),
+        _i1.RouteConfig(About_us.name, path: '/about-us'),
+        _i1.RouteConfig(Contact_us.name, path: '/contact-us')
       ];
 }
 
@@ -71,4 +81,16 @@ class Products extends _i1.PageRouteInfo {
   const Products() : super(name, path: '/product-listing');
 
   static const String name = 'Products';
+}
+
+class About_us extends _i1.PageRouteInfo {
+  const About_us() : super(name, path: '/about-us');
+
+  static const String name = 'About_us';
+}
+
+class Contact_us extends _i1.PageRouteInfo {
+  const Contact_us() : super(name, path: '/contact-us');
+
+  static const String name = 'Contact_us';
 }

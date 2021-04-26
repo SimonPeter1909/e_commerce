@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:e_commerce/pages/category_listing/category_lisitng_provider.dart';
 import 'package:e_commerce/pages/common/src/header_provider.dart';
 import 'package:e_commerce/utils/router.gr.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<HeaderProvider>(
           create: (context) => HeaderProvider(),
-        )
+        ),
+        ChangeNotifierProvider<CategoryListingProvider>(
+            create: (context) => CategoryListingProvider())
       ],
       child: MaterialApp.router(
         title: 'E-Commerce',
@@ -27,9 +30,7 @@ class MyApp extends StatelessWidget {
           Locale('en'),
         ],
         theme: ThemeData(
-          primarySwatch: Colors.blue,
-          textTheme: GoogleFonts.latoTextTheme()
-        ),
+            primarySwatch: Colors.blue, textTheme: GoogleFonts.latoTextTheme()),
         routerDelegate: _appRouter.delegate(),
         routeInformationParser: _appRouter.defaultRouteParser(),
         // home: Dashboard(),

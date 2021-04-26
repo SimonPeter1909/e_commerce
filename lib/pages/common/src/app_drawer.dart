@@ -1,11 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:e_commerce/pages/about_us.dart';
-import 'package:e_commerce/pages/category_listing.dart';
-import 'package:e_commerce/pages/contact_us.dart';
-import 'package:e_commerce/pages/dashboard.dart';
 import 'package:e_commerce/utils/router.gr.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class AppDrawer extends StatefulWidget {
   @override

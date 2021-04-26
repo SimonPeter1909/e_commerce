@@ -90,6 +90,7 @@ class __ProductsGridViewState extends State<_ProductsGridView> {
     return ConstrainedBox(
       constraints: BoxConstraints(maxHeight: double.infinity),
       child: SmartGridView(
+        physics: ScrollPhysics(),
         padding: const EdgeInsets.all(12),
         tileWidth: 250,
         tileHeight: 400,
